@@ -1,8 +1,17 @@
-Jenkins:
- Clone repo - Files in source code repo will be first copied to workspace when job runs at first.
+1 - Jenkins:Clone repo - Files in source code repo will be first copied to workspace when job runs at first.
 
-Maven uses file pom.xml
-
+2 - Maven uses file pom.xml
 Install Maven from Jenkins --> Manage Jenkins --> Global Tool configuration --> Add Maven --> Name it and select required version
+
+3 - Hoosk scripts --> At below location Git hooks we have few sample scripts.. we can use them or write new scrips and place here if required..example if developer neeeds to put some Jira number in commit message ,so we can enfore them to mention it by making some script for "git commit" and place it here (basicaaly helps to keep the git messages in particular format with custom hooks in Git enterprises edition)
+#jenkins_home/workspace/myfirstbuild/.git/hooks
+                --> Generate admin token from jenkins and copy the token id to Git add Webhook
+110cdfdd6ba47e262d0fe916c83b6083ce
+
+4 - Discard old builds --> To prevent logs to occupy unnecessary space we can use this option to keep recent logs
+
+5 - Archive artifact --> Using this we can push the our artifact(*.jar,*.war) to binary repo Jfrog(creating a single place for teams to manage all their binary artifacts efficiently,Nexus(uses file system to store artifacts and metadata)
+
+6 This project is parameterized -option, if need some parameter from external source .. uses to pass value for job
 
 

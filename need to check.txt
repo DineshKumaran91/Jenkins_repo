@@ -1,0 +1,4 @@
+- pom.xml reading?
+- Basic shell scripts?
+- JUnit plugin grapical view?
+- 
