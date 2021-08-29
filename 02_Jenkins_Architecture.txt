@@ -1,0 +1,22 @@
+Architecture:
+Developer1
+           -->JavaCode --> Commit code to SourceCodeRepo-->  JenkinsCI --> Maven --> Selenium(Test server) --> Production
+Developer2
+
+
+After Code commit:
+ - Jenkins server checks the repo regular interval and pulls if any new code available.
+ - Build server builds the code into executable file --> above example java file will be converted into JAR file using Maven(build server).(Maven plugin runs in Jenking environment).
+ - In case the build fails, a feedback is sent to developers.
+ - Finally Jenkins then deploy the build app on test server --> Here we using selenium and if test fails then the feedback will be sent to developers(Selenium plugin runs in Jenking environment).
+ - If no error then tested app will be deloyed to test environment.
+
+
+Master_Slave Architecture:
+                                          --> Jenkins slave
+ SourceCodeRepo --> Master Jenkins server --> Jenkins slave
+                                          --> Jenkins slave
+
+ - Master Jenkins pulls the newly commit code from repo
+ - Master distributs the workload to slave hosts
+ - Slaves perform the build,test and produce test reports

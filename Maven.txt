@@ -1,0 +1,29 @@
+Maven is a build plugin 
+- uses file pom.xml for get know the required version other plugins and download and execute as per the Maven cmd 
+- refer plugins & usage page for code:http://maven.apache.org/plugins/index.html
+- Usually companies having their own repo where we can keep required plugins for the project that repo can be mentioned in pom.xml
+
+
+Install Maven from Jenkins --> Manage Jenkins --> Global Tool configuration --> Add Maven --> Name it and select required version
+
+
+Invoke top level Maven and targets:
+ - refer: https://www.jenkins.io/doc/tutorials/build-a-java-app-with-maven/
+
+
+Jenkins file for build without test:
+pipeline {
+    agent {
+        docker {
+            image 'maven:3.8.1-adoptopenjdk-11' 
+            args '-v /root/.m2:/root/.m2' 
+        }
+    }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
+    }
+}

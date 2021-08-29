@@ -1,0 +1,8 @@
+Pre_requisities:
+ - Java Development Kit(1.7,18 or above) also set environment variable
+ - 2gb of RAM minimum
+ - Port 8080 should be free to use
+
+Download Jenkins setup from --> https://www.jenkins.io/download/
+
+Install the setup --> launch localhost:8080 --> enter secret initial pwd --> create login credentials --> login to the jenkins

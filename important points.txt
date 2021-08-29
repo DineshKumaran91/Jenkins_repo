@@ -1,0 +1,8 @@
+Jenkins:
+ Clone repo - Files in source code repo will be first copied to workspace when job runs at first.
+
+Maven uses file pom.xml
+
+Install Maven from Jenkins --> Manage Jenkins --> Global Tool configuration --> Add Maven --> Name it and select required version
+
+

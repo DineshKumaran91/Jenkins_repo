@@ -1,0 +1,8 @@
+1,Create new freestlyeProject Job:
+
+NewItem --> NameOfJob--> click Freestyle Project --> save --> Enter description -->  Build(Execute windows batch command - write some echo "" cmd) --> save --> Build now --> select 1 in Build hostroy to view results 
+
+
+2,Create new freestlyeProject Job (Autorun):
+
+NewItem --> NameOfJob--> click Freestyle Project --> save --> Enter description --> Build Trigger(Build periodically)-->  Build(Execute windows batch command - write some echo "" cmd) --> save --> wait a min --> select 1 in Build hostroy to view results 

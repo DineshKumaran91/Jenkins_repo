@@ -1,0 +1,20 @@
+Manage Jenkins:
+
+  1-- System configuration:
+      - Configure system --> Home Dirrectory - All jenkings related configurations will be stored in mention path
+                        --> System message - Will be shown up in menu
+                        --> No. of Executors default(#2)- specofy how many thread/job can run at time. if more number of jobs are pushed then those will be queued up.. CPU,Memory and disk usages will be high when new job triggered up.
+                        --> Usage - mention use this node or run only lable match
+                        --> Email Noti - mention SMTP server name and configure authentications 
+  
+
+  2-- Global tool configuration:
+      - Configure all the tool&installed-locations required based on our source code( tools like --> Maven,JDK, Source code repo(gitHub),Gradle,ant,Maven,Docker.
+
+ 
+  3-- Configure Global security:
+      - Enable Security --> Jenkin own user DB(user accounts created locally in jenkin itself to access the Jenkins and manage the jobs)
+      - LDAP --> To control from AD user objects
+
+  4-- ManagePlugin:
+      - Role_Based_Access plugin: - in Available plugin --> search for "Role-based Authorization Strategy" --> select to install --> Create new user in Manage user --> Go to Manage&assign roles under security --> Manage role --> add new role for developer --> Login and 

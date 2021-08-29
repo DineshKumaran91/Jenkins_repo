@@ -1,0 +1,22 @@
+For some job:
+
+Status :
+ - Will show the status of the current build
+
+Changes :
+ - When a version control (Git) configured then this will show what is exact difference between new and existing code.
+
+Workspace: 
+ - Output and file for a build will be saved into this location
+
+Build Now:
+ - Use to manually trigger the build
+
+Configure:
+ - to edit the exiting configuration for a job
+
+Delete Project:
+ - Delete the job
+
+Rename:
+ - Is uses to rename the job
